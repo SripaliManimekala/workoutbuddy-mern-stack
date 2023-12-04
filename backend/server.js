@@ -8,8 +8,10 @@ const app = express()
 
 //middleware is the code that executes between us getting a request on the server and us sending a response
 //this function will fire for every request that comes in
-app.use(() => {
+app.use((req, res, next) => {
     console.log("Middleware is working")
+    console.log(req.path, req.method)
+    next()
 })
 
 //reacting to requests
