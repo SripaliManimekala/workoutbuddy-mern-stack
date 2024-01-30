@@ -59,7 +59,8 @@ const WorkoutForm = () => {
             />
 
             <button>Add Workout</button>
-            { error && <div className="error">{error}</div> }//output error if there is an error while adding to the form
+            {/* output error if there is an error while adding to the form */}
+            { error && <div className="error">{error}</div> }
         </form>
      );
 }
