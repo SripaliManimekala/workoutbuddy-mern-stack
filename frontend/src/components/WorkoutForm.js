@@ -25,7 +25,7 @@ const WorkoutForm = () => {
             setError(json.error)
         }
         if(response.ok){
-            setTitle('')
+            setTitle('')//reset all the values again after adding one
             setLoad('')
             setReps('')
             setError(null)
@@ -59,7 +59,7 @@ const WorkoutForm = () => {
             />
 
             <button>Add Workout</button>
-            { error && <div className="error">{error}</div> }
+            { error && <div className="error">{error}</div> }//output error if there is an error while adding to the form
         </form>
      );
 }
