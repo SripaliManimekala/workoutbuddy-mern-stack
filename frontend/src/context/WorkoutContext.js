@@ -11,7 +11,11 @@ export const workoutReducer = (state, action) => {
         case 'CREATE_WORKOUT':
             return {
                 workouts: [action.payload, ...state.workouts]//adding new workout to first of this array and other prev workouts
-            }  
+            } 
+        case 'DELETE_WORKOUT':
+            return {
+                workouts: state.workouts.filter((w)=> w._id!== action.payload._id)
+            } 
         default:
             return state
     }
