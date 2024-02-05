@@ -4,6 +4,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
+const userRoutes = require('./routes/user')
 
 ///start of the express app
 const app = express()
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 //reacting to requests
 //routes
 app.use('/api/workouts', workoutRoutes)
+app.use('/api/user', userRoutes)
 
 //use mongoose object to connect to the database
 mongoose.connect(process.env.MONGO_URI)//this is async in nature,takes a lil bit time to do, so it returns a promise, so we tack on it using .then method to fire a function when its complete
