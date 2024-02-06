@@ -7,6 +7,7 @@ const loginUser = async (req, res) => {
 
 //sign up user
 const signupUser = async (req, res) => {
+    
     res.json({mssg:'sign up user'})
 }
 
