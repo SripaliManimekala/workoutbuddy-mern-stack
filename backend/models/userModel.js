@@ -19,7 +19,7 @@ const userSchema = new Schema({
 //User.create() like this we can use on user model also we can create our own static methods
 
 //static sign up method
-userSchema.statics.signup = async (email, password) => {
+userSchema.statics.signup = async function(email, password) {
     //chaeck  if the user is already exists or not even though its unique 
     const exists = await this.findOne({email})
 
